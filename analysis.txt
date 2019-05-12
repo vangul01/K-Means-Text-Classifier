@@ -1,0 +1,156 @@
+-------------------------------- BEST CHOICE OF K is K = 8 ----------------------------------
+Having more K's up to a certain point (which I found to be K=8) shows the subtleties of other topics present in the articles. When I first read through the articles, I classified them like so:
+
+1 = Group 1
+2 = Group 1
+3 = Group 1  but not quite… airplane parts heist
+4 = Group 1
+5 = Group 2
+6 = Group 2 but not quite… meat health safety issues, vague on hoof and mouth
+7 = Group 3
+8 = Group 3
+9 = Group 2 predominantly about hoof and mouth disease, has some info on airline hijacking
+10 = 1 or 2 —> Group 1 because more text for hoof mouth disease but more airline safety top words
+
+With K=8, the documents that I was certain of being in a topic ended up being most similar to documents that all had the same label, whereas the ones that I could see as not fitting their topic 100% were similar to more of a mix of documents, predominantly the ones I would have labeled them as but also with 1 or 2 documents that were different topics. The documents 9 and 10 that were split on hoof and mouth disease and airline safety were close to evenly split with larger and smaller K values and in general are labeled how I would have labeled them too. 
+
+With small K values, you don't really get to see how well a document fits with the label it was given because you only end up basing the categorization on 1 or 2 documents. They were still labeled the way I would have labeled them, but there are no subtleties present in the labeling, its more general. Overall I think a K value of 8 was interesting because it noticed the subtleties I noticed when going through the documents. 8 is probably a really good number to choose because there are originally 8 documents per topic, so its better for seeing how closely a document actually fits in to a group of 8.
+
+-------------------------------- Output for K = 8 ----------------------------------
+
+Unknown Document 1's Closest K neighbors:
+Document 0 in airline
+Document 1 in airline
+Document 3 in airline
+Document 6 in airline
+Document 4 in airline
+Document 5 in airline
+Document 2 in airline
+Document 7 in airline
+Unknown Document 1 most likely belongs to Topic airline
+
+Unknown Document 2's Closest K neighbors:
+Document 7 in airline
+Document 3 in airline
+Document 4 in airline
+Document 5 in airline
+Document 2 in airline
+Document 0 in airline
+Document 6 in airline
+Document 1 in airline
+Unknown Document 2 most likely belongs to Topic airline
+
+Unknown Document 3's Closest K neighbors:
+Document 5 in airline
+Document 3 in airline
+Document 7 in airline
+Document 2 in airline
+Document 19 in bank
+Document 1 in airline
+Document 9 in disease
+Document 16 in bank
+Unknown Document 3 most likely belongs to Topic airline
+
+Unknown Document 4's Closest K neighbors:
+Document 0 in airline
+Document 3 in airline
+Document 1 in airline
+Document 7 in airline
+Document 5 in airline
+Document 6 in airline
+Document 4 in airline
+Document 2 in airline
+Unknown Document 4 most likely belongs to Topic airline
+
+Unknown Document 5's Closest K neighbors:
+Document 8 in disease
+Document 9 in disease
+Document 11 in disease
+Document 12 in disease
+Document 13 in disease
+Document 15 in disease
+Document 10 in disease
+Document 14 in disease
+Unknown Document 5 most likely belongs to Topic disease
+
+Unknown Document 6's Closest K neighbors:
+Document 12 in disease
+Document 11 in disease
+Document 8 in disease
+Document 9 in disease
+Document 6 in airline
+Document 2 in airline
+Document 3 in airline
+Document 14 in disease
+Unknown Document 6 most likely belongs to Topic disease
+
+Unknown Document 7's Closest K neighbors:
+Document 16 in bank
+Document 22 in bank
+Document 18 in bank
+Document 23 in bank
+Document 19 in bank
+Document 21 in bank
+Document 17 in bank
+Document 20 in bank
+Unknown Document 7 most likely belongs to Topic bank
+
+Unknown Document 8's Closest K neighbors:
+Document 21 in bank
+Document 19 in bank
+Document 16 in bank
+Document 17 in bank
+Document 23 in bank
+Document 18 in bank
+Document 22 in bank
+Document 20 in bank
+Unknown Document 8 most likely belongs to Topic bank
+
+Unknown Document 9's Closest K neighbors:
+Document 10 in disease
+Document 2 in airline
+Document 11 in disease
+Document 12 in disease
+Document 3 in airline
+Document 8 in disease
+Document 4 in airline
+Document 6 in airline
+Unknown Document 9 most likely belongs to Topic disease
+
+Unknown Document 10's Closest K neighbors:
+Document 1 in airline
+Document 3 in airline
+Document 0 in airline
+Document 15 in disease
+Document 14 in disease
+Document 11 in disease
+Document 6 in airline
+Document 2 in airline
+Unknown Document 10 most likely belongs to Topic airline
+
+-------------------------------- CONFUSION MATRIX AND PERFORMANCE METRICS ----------------------------------
+CONFUSION MATRIX
+
+     Actual: 1 2 3
+Predicted 1: 5 0 0 |5
+Predicted 2: 0 3 0 |3
+Predicted 3: 0 0 2 |2
+	     5 3 2
+TOPICS KEY:
+1:Topic airline
+2:Topic disease
+3:Topic bank
+
+PRECISION
+airline= 1.0  disease= 1.0  bank= 1.0  
+
+RECALL
+airline= 1.0  disease= 1.0  bank= 1.0  
+
+F MEASURE
+airline= 1.0  disease= 1.0  bank= 1.0  
+
+TOTAL PRECISION = 1.0
+TOTAL RECALL = 1.0
+TOTAL F-MEASURE = 1.0
+
