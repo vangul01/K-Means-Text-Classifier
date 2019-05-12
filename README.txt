@@ -1,4 +1,4 @@
-This is a text classifier program implemented in Java that uses unsupervised learning in order to classify unstructured data in the form of news articles. This project was completed in the Big Data Sciences course at NYU with Professor Anasse Bari. 
+This is a text classifier program implemented in Java that uses unsupervised learning to classify unstructured text data. This project was completed in the Big Data Sciences course at NYU with Professor Anasse Bari. 
 
 This program takes in text files, uses NLP techniques and the Stanford NLP simple library to preprocess the files, find top keywords, create a tf-idf word document matrix and cluster each article based on its similarity to the others using K-means. F-measure, precision, recall, and a confusion matrix was used as performance metrics. Unknown documents are also assigned their most likely cluster through an implementation of the KNN algorithm.
 
