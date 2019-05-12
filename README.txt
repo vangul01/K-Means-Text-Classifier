@@ -1,11 +1,11 @@
-READ ME
+This is a text classifier program implemented in Java that uses unsupervised learning in order to classify unstructured data in the form of news articles. This project was completed in the Big Data Sciences course at NYU with Professor Anasse Bari. 
+
+This program takes in text files, uses NLP techniques and the Stanford NLP simple library to preprocess the files, find top keywords, create a tf-idf word document matrix and cluster each article based on its similarity to the others using K-means. F-measure, precision, recall, and a confusion matrix was used as performance metrics. Unknown documents are also assigned their most likely cluster through an implementation of the KNN algorithm.
 
 *** Bds.java is my main class ***
-
 To run program:
 
 1. unzip file 
-
 **** My program requires Stanford NLP that contains Sentence and Lemmatization ****
 First try running with the dependencies you already have, if that doesnt work...
 2. download stanford corenlp from here https://stanfordnlp.github.io/CoreNLP/download.html
@@ -48,10 +48,5 @@ line206		//means = init_clusters(myMatrix);	//k-means
 Notes:
 1. Word output is ordered by frequency, with most frequent at the top
 	To see the wordcount too, update commented out string in Word.java line 64
-2. NER was too slow to correctly implement
-	n-grams takes its place in pre-processing
-	NER code is still written but commented out because it takes too long
-3. The confusion matrix for output clusters and precision/recall/F measure scores are in computations.txt file
-4. KNN Confusion matrix and precision/recall/F measure scores are in computations.txt file
 
 
